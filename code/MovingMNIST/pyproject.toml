@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flow-ssm-moving-mnist"
+version = "0.1.0"
+description = "Flow-SSM and FERNN models for Moving MNIST prediction"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24,<3",
+    "torch>=2.3",
+    "torchvision>=0.18",
+    "tqdm>=4.66",
+    "matplotlib>=3.7",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.setuptools]
+py-modules = ["experiment", "train", "evaluate"]
+packages = ["models", "utils"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

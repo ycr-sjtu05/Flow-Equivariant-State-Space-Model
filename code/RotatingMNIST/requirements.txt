@@ -1,0 +1,7 @@
+torch
+torchvision
+escnn
+numpy
+matplotlib
+tqdm
+pytest
